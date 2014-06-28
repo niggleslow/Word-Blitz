@@ -1,0 +1,170 @@
+.backgroundimg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.Mainmenucontainer {
+	position: absolute;
+	background: #FFFF00;
+	margin:5px;
+	height:5%;
+	width:10%;
+	left:85%;
+	top:5%;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: black;
+	z-index: 2;
+	opacity: 1;	
+}
+
+.Mainmenu a {
+	position: absolute;
+	width: 90%;
+	text-decoration: none;
+	color: #3300FF;
+	font-family: 'Arvo', serif;
+	font-size:100%;
+	left: 15%;
+	top:15%;
+}
+
+.Mainmenu a:hover {
+	position: absolute;
+	width: 90%;
+	text-decoration: none;
+	color: #3300FF;
+	font-family: 'Arvo', serif;
+	font-size:100%;
+	left: 15%;
+	top:15%;
+	text-shadow:0 0 0.9em #9966FF,
+	0 0 0.9em #9966FF;
+}
+
+.Word {
+	position: absolute;
+	z-index: 1;
+	font-family: 'Arvo', serif;
+	font-size: 500%;
+	top: 2.5%;
+	left: 12%;
+	color: #FFCC00;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000,
+    0 0 0.9em #9966FF,
+    0 0 0.9em #9966FF;
+}
+
+.AcceptedWordsContainer {
+	position: absolute;
+	background: #99FF66;
+	margin:5px;
+	height:30%;
+	width:30%;
+	left:5%;
+	top:20%;
+	border-style:solid;
+	border-color:black;
+	z-index: 1;
+	opacity: 0.5;
+}
+
+.AcceptedWords {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 150%;
+	z-index: 2;
+	opacity:1;
+}
+
+.RejectedWordsContainer {
+	position: absolute;
+	background: #FF3366;
+	margin:5px;
+	height:30%;
+	width:30%;
+	left:5%;
+	top:50.5%;
+	border-style:solid;
+	border-color:black;
+	z-index: 1;
+	opacity: 0.5;	
+}
+
+.RejectedWords {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 150%;
+	z-index: 2;
+	opacity:1;
+}
+
+.WordCounter {
+	position: absolute;
+	z-index: 1;
+}
+
+.Timer {
+	position: absolute;
+	z-index: 1;
+}
+
+.LevelCounter {
+	position: absolute;
+	z-index: 1;
+}
+
+.UserEntryContainer {
+	position: absolute;
+	background: #0033FF;
+	margin:5px;
+	height:10%;
+	width:30%;
+	left:5%;
+	top:85%;
+	border-radius: 20px;
+	border-style:solid;
+	border-color:black;
+	z-index: 1;
+	opacity:1;
+}
+
+.UserEntry {
+	position: absolute;
+	left: 7%;
+	font-size: 150%;
+	font-family: 'Arvo', serif;
+	color: #FFCC00;
+	z-index: 2;
+}
+
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}

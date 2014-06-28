@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title> Game Page</title>
+	<link rel="stylesheet" href="../stylesheets/game.css" />
+	<link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="Background"><img class="backgroundimg" src="../images/woodentexture.jpg"></div>
+	
+	<div class="Mainmenucontainer"> 
+		<div class="Mainmenu"><a href="/">Main Menu</a>
+		</div>
+	</div>
+	
+	<div class="Word"> {{chosen}} </div>
+	
+	<div class="AcceptedWordsContainer"> 
+		<div class="AcceptedWords"> {{acceptedWords}}
+		</div>
+	</div>
+	
+	<div class="RejectedWordsContainer"> 
+		<div class="RejectedWords"> {{rejectedWords}}
+		</div>
+	</div>
+	
+	<div class="WordCounter"> </div>
+	
+	<div class="Timer"></div>
+	
+	<div class="LevelCounter"></div>
+	
+	<div class="UserEntryContainer">
+		<div class="UserEntry">
+			<form method="post">
+				<label for="Entry">Synonym:</label>
+				<input name="userTry" type="text" value="{{userTry}}"><br>
+				<input name="" type="submit" value="ENTER">
+			</form>
+		</div>		
+	</div>
+
+</body>
+</html>
