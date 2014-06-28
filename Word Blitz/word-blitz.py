@@ -97,7 +97,8 @@ class Help(webapp2.RequestHandler):
 class LeaderBoard(webapp2.RequestHandler):
     # Handler for leaderboard page
     def get(self):
-        self.response.write()
+        template = jinja_environment.get_template('leaderboard.html')
+        self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
     ('/', MainMenu),

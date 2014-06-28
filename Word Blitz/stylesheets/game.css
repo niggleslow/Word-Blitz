@@ -50,7 +50,7 @@
 	font-family: 'Arvo', serif;
 	font-size: 500%;
 	top: 2.5%;
-	left: 12%;
+	left: 23%;
 	color: #FFCC00;
 	text-shadow: 1px 1px 0 #000,
     -1px 1px 0 #000,
@@ -86,7 +86,7 @@
 	margin:5px;
 	height:30%;
 	width:30%;
-	left:5%;
+	left:15%;
 	top:20%;
 	border-style:solid;
 	border-color:black;
@@ -108,7 +108,7 @@
 	margin:5px;
 	height:30%;
 	width:30%;
-	left:5%;
+	left:15%;
 	top:50.5%;
 	border-style:solid;
 	border-color:black;
@@ -124,19 +124,71 @@
 	opacity:1;
 }
 
+.WordCounterContainer{
+	position: absolute;
+	background: #FFCC33;
+	margin:10px;
+	height:10%;
+	width:10%;
+	left:48%;
+	top:45%;
+	border-style:solid;
+	border-color:black;
+	z-index: 1;
+	opacity: 1;
+}
+
 .WordCounter {
 	position: absolute;
+	font-family: sans-serif;
+	font-size: 150%;
+	bottom: 30%;
+	z-index: 2;
+	opacity:1;
+}
+
+.TimerContainer{
+	position: absolute;
+	background: #FFFFFF;
+	margin:5px;
+	height:10%;
+	width:20%;
+	left:50%;
+	top:5%;
+	border-style:solid;
+	border-color:black;
 	z-index: 1;
+	opacity: 1;	
 }
 
 .Timer {
 	position: absolute;
+	font-family: sans-serif;
+	font-size: 150%;
+	z-index: 2;
+	opacity:1;
+}
+
+.LevelCounterContainer{
+	position: absolute;
+	background: #99CCFF;
+	margin:5px;
+	height:10%;
+	width:20%;
+	left:70%;
+	top:80%;
+	border-style:solid;
+	border-color:black;
 	z-index: 1;
+	opacity: 1;
 }
 
 .LevelCounter {
 	position: absolute;
-	z-index: 1;
+	font-family: sans-serif;
+	font-size: 150%;
+	z-index: 2;
+	opacity: 1;
 }
 
 .UserEntryContainer {
@@ -145,7 +197,7 @@
 	margin:5px;
 	height:10%;
 	width:30%;
-	left:5%;
+	left:15%;
 	top:85%;
 	border-radius: 20px;
 	border-style:solid;
