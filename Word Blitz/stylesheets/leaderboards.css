@@ -1,0 +1,127 @@
+.backgroundimg {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.Container {
+	position: absolute;
+	background: #000000;
+	height:115%;
+	margin:10px;
+	width:90%;
+	left:3%;
+	top:2.5%;
+	border-radius: 20px;
+	border-style:solid;
+	border-color:white;
+	z-index: 1;
+	opacity:0.35;
+}
+
+.Label a{
+	position: absolute;
+	width: 90%;
+	text-decoration: none;
+	letter-spacing: 5px;
+	color: #FFFFFF;
+	font-family: 'Shadows Into Light', cursive;
+	font-size:750%;
+	left: 25%;
+	top: 1%;
+	text-shadow: 0px 0px 15px #FFF;
+	z-index:1;
+}
+
+.Label a:hover {
+	position: absolute;
+	width: 90%;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-family: 'Shadows Into Light', cursive;
+	font-size:750%;
+	left: 25%;
+	top: 1%;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+	text-shadow: 0px 0px 5px #fff, 0px 0px 15px #fff, 0px 0px 25px #fff, 0px 0px 80px #fff, 0px 0px 100px #FFF;
+	z-index:1;
+}
+
+#CurrentLeaders {
+	position: absolute;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 500%;
+	left: 5%;
+	top: 12.5%;
+	z-index:1;
+}
+
+#firstPlace {
+	color: #FFFF00;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#secondPlace {
+	color: #FFCC00;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#thirdPlace {
+	color: #FF9900;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#fourthPlace {
+	color: #FF6600;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#fifthPlace {
+	color: #FF3300;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#CurrentLevels {
+	position: absolute;
+	color: #FFFFFF;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 500%;
+	left: 60%;
+	top: 12.5%;
+	z-index:1;
+}
+
+#firstLevel {
+	color: #FFFF00;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#secondLevel {
+	color: #FFCC00;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#thirdLevel {
+	color: #FF9900;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#fourthLevel {
+	color: #FF6600;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+#fifthLevel {
+	color: #FF3300;
+	text-shadow: 0px 0px 6px #FFFFFF, 0px 0px 12px #FFFFFF;
+}
+
+ul{
+	list-style-type: none;
+}

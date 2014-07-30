@@ -5,212 +5,334 @@
 	left: 0;
 }
 
-.Mainmenucontainer {
+.Mainmenucontainer a{
 	position: absolute;
-	background: #FFFF00;
-	margin:5px;
+	background: #000000;
+	box-shadow: 0px 0px 20px #FFF;
+	margin:2px;
 	height:5%;
-	width:10%;
-	left:85%;
-	top:5%;
-	border-radius: 20px;
+	width:8%;
+	left:2.5%;
+	top:2.5%;
+	border-radius: 50px 20px 50px 20px;
 	border-style: solid;
-	border-color: black;
+	border-color: white;
+	z-index: 2;
+	opacity: 0.5;	
+}
+
+.Mainmenucontainer a:hover {
+	position: absolute;
+	background: #000000;
+	box-shadow: 0px 0px 20px #FF0000;
+	margin:2px;
+	height:5%;
+	width:8%;
+	left:2.5%;
+	top:2.5%;
+	border-radius: 50px 20px 50px 20px;
+	border-style: solid;
+	border-color: white;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 	z-index: 2;
 	opacity: 1;	
-}
+}	
 
-.Mainmenu a {
+.Mainmenu {
 	position: absolute;
-	width: 90%;
+	top: 7.5%;
 	text-decoration: none;
-	color: #3300FF;
-	font-family: 'Arvo', serif;
+	color: #FF0000;
+	font-family: 'Shadows Into Light', cursive;
 	font-size:100%;
+	font-weight: 900;
+	text-shadow: 0px 0px 20px #FFF;
 	left: 15%;
 	top:15%;
 }
 
-.Mainmenu a:hover {
-	position: absolute;
-	width: 90%;
-	text-decoration: none;
-	color: #3300FF;
-	font-family: 'Arvo', serif;
-	font-size:100%;
-	left: 15%;
-	top:15%;
-	text-shadow:0 0 0.9em #9966FF,
-	0 0 0.9em #9966FF;
+.WordContainer {
+	position: absolute;	
+	left: 5%;
+	height: 15%;
+	width: 50%;
+	z-index: 1;	
+	border-style: transparent;
 }
 
 .Word {
+	position: relative;
+	top: -30%;
+	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 100px;
+	color: #FFF;
+}
+
+.WordsContainer{
 	position: absolute;
-	z-index: 1;
-	font-family: 'Arvo', serif;
-	font-size: 500%;
-	top: 2.5%;
-	left: 23%;
-	color: #FFCC00;
-	text-shadow: 1px 1px 0 #000,
-    -1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000,
-    0px 1px 0 #000,
-    0px -1px 0 #000,
-    -1px 0px 0 #000,
-    1px 0px 0 #000,
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    -2px -2px 0 #000,
-    0px 2px 0 #000,
-    0px -2px 0 #000,
-    -2px 0px 0 #000,
-    2px 0px 0 #000,
-    1px 2px 0 #000,
-    -1px 2px 0 #000,
-    1px -2px 0 #000,
-    -1px -2px 0 #000,
-    2px 1px 0 #000,
-    -2px 1px 0 #000,
-    2px -1px 0 #000,
-    -2px -1px 0 #000,
-    0 0 0.9em #9966FF,
-    0 0 0.9em #9966FF;
+	top: 22.5%;
+	left: 5%;
+	height: 55%;
+	width: 50%;
+	box-shadow: 0px 0px 5px #F0FFFF,
+		0px 0px 10px #F2FFFF, 0px 0px 15px #F3FFFF;
+	border-style: transparent;
+	border-color: white;
 }
 
 .AcceptedWordsContainer {
-	position: absolute;
+	position: relative;
 	background: #99FF66;
-	margin:5px;
-	height:30%;
-	width:30%;
-	left:15%;
-	top:20%;
-	border-style:solid;
-	border-color:black;
+	height:50%;
+	border-radius: 5px;
+	width:100%;
+	box-shadow: 0px 0px 5px #FFF;
+	top:0%;
+	border-style:transparent;
+	border-color:white;
 	z-index: 1;
-	opacity: 0.5;
+	opacity: 0.25;
+}
+
+.AcceptedWordsLabel {
+	position: absolute;
+	left: 2.5%;
+	top: 0%;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 150%;
+	color: #FFF;
+	z-index: 2;
+	opacity:1;
 }
 
 .AcceptedWords {
 	position: absolute;
-	font-family: sans-serif;
+	left: 2.5%;
+	top: 15%;
+	font-family: 'Shadows Into Light', cursive;
 	font-size: 150%;
+	color: #FFF;
 	z-index: 2;
 	opacity:1;
 }
 
 .RejectedWordsContainer {
-	position: absolute;
+	position: relative;
 	background: #FF3366;
-	margin:5px;
-	height:30%;
-	width:30%;
-	left:15%;
-	top:50.5%;
-	border-style:solid;
-	border-color:black;
+	border-radius: 5px;
+	height:50%;
+	box-shadow: 0px 0px 30px #FFF;
+	border-style:transparent;
+	border-color:white;
 	z-index: 1;
-	opacity: 0.5;	
+	opacity: 0.25;	
+}
+
+.RejectedWordsLabel {
+	position: absolute;
+	top: 50%;
+	left: 2.5%;
+	font-family: 'Shadows Into Light', cursive;
+	color: #FFF;
+	font-size: 150%;
+	z-index: 2;
+	opacity:1;
 }
 
 .RejectedWords {
 	position: absolute;
-	font-family: sans-serif;
+	top: 65%;
+	left: 2.5%;
+	font-family: 'Shadows Into Light', cursive;
+	color: #FFF;
 	font-size: 150%;
 	z-index: 2;
 	opacity:1;
+}
+
+#RepeatedContainer {
+	position: absolute;
+	top: 78.5%;
+	width: 60%;
+	left: 1%;
+	border-color: #FFF;
+	background: transparent;
+	z-index: 5;
+}
+
+.Warning {
+	position: relative;
+	font-family: "Shadows Into Light", cursive;
+	color: #FFFF00;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bolder;
+}
+
+
+.containerMisc {
+	position: relative;
+	height: 80%;
+	width: 35%;
+	top: 15%;
+	left: 57.5%;
+	border-style: transparent;
+	z-index: 1;
+}
+
+.LevelCounterContainer{
+	position: relative;
+	height: 33.3%;
+	border-style: transparent;
+	z-index: 1;
 }
 
 .WordCounterContainer{
-	position: absolute;
-	background: #FFCC33;
-	margin:10px;
-	height:10%;
-	width:10%;
-	left:48%;
-	top:45%;
-	border-style:solid;
-	border-color:black;
+	position: relative;
+	top: 0%;
+	height: 33.3%;
+	border-style: transparent;
 	z-index: 1;
-	opacity: 1;
+}
+
+.SynCounterContainer{
+	position: relative;
+	top: 0%;
+	height: 33.3%;
+	border-style: transparent;
+	z-index: 1;
+}
+
+.LevelLabel {
+	position: relative;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: bolder;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 30px;
+	color: #FFF;
+	opacity: 0.5%;
+}
+
+.WordLabel {
+	position: relative;
+	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 30px;
+	color: #FFF;
+	opacity: 0.5%;
+}
+
+.SynLabel {
+	position: relative;
+	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 30px;
+	color: #FFF;
+	opacity: 0.5%;
+}
+
+.LevelCounter {
+	position: relative;
+	margin-top: 12.5px;
+	text-align: center;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 45px;
+	color: #FFF;
+	opacity: 0.25%;
 }
 
 .WordCounter {
-	position: absolute;
-	font-family: sans-serif;
-	font-size: 150%;
-	bottom: 30%;
-	z-index: 2;
-	opacity:1;
+	position: relative;
+	text-align: center;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 45px;
+	color: #FFF;
+	opacity: 0.25%;
+}
+
+.SynCounter {
+	position: relative;
+	text-align: center;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 45px;
+	color: #FFF;
+	opacity: 0.25%;
 }
 
 .TimerContainer{
 	position: absolute;
-	background: #FFFFFF;
+	background: transparent;
 	margin:5px;
-	height:10%;
-	width:20%;
-	left:50%;
-	top:5%;
-	border-style:solid;
-	border-color:black;
+	height:15%;
+	width:35%;
+	left:63%;
+	top:2%;
 	z-index: 1;
 	opacity: 1;	
 }
 
-.Timer {
-	position: absolute;
-	font-family: sans-serif;
-	font-size: 150%;
+#Timer{
+	position: relative;
 	z-index: 2;
+	font-size: 55px;
+	font-family: 'Shadows Into Light', cursive;
+	color: #FFF;
+	text-shadow: 0px 0px 5px #FF0000, 0px 0px 10px #FFF, 0px 0px 15px #FF0000;
+	background-color: transparent;
 	opacity:1;
-}
-
-.LevelCounterContainer{
-	position: absolute;
-	background: #99CCFF;
-	margin:5px;
-	height:10%;
-	width:20%;
-	left:70%;
-	top:80%;
-	border-style:solid;
-	border-color:black;
-	z-index: 1;
-	opacity: 1;
-}
-
-.LevelCounter {
-	position: absolute;
-	font-family: sans-serif;
-	font-size: 150%;
-	z-index: 2;
-	opacity: 1;
 }
 
 .UserEntryContainer {
 	position: absolute;
-	background: #0033FF;
+	background: #000000;
 	margin:5px;
-	height:10%;
-	width:30%;
+	height:7.5%;
+	width:28%;
 	left:15%;
 	top:85%;
-	border-radius: 20px;
-	border-style:solid;
-	border-color:black;
+	border-radius: 5px;
+	border-style: solid;
+	box-shadow: 0px 0px 5px #FFF, 0px 0px 10px #FFF, 0px 0px 15px #FFF;
+	border-color: red;
 	z-index: 1;
-	opacity:1;
+	opacity:0.75;
 }
 
 .UserEntry {
-	position: absolute;
-	left: 7%;
+	position: relative;
+	display: inline;
+	left: 3%;
 	font-size: 150%;
-	font-family: 'Arvo', serif;
+	font-family: 'Shadows Into Light', cursive;
+	letter-spacing: 2px;
 	color: #FFCC00;
+	opacity: 1;
 	z-index: 2;
 }
+
+#form {
+	display: inline;
+}
+
+#GameOver {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 25px;
+	font-weight: 300px;
+	color: #fff;
+}
+
+input[type="submit"] {
+	font-family: 'Shadows Into Light', cursive;
+	font-weight: 900;
+	color: #FF0000;
+	text-shadow: 0px 0px 10px #FFF;
+	border-radius: 20px 5px 20px 5px;
+	background-color: #000;
+}
+

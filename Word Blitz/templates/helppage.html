@@ -3,23 +3,48 @@
 <head>
 	<title> Help Page</title>
 	<link rel="stylesheet" href="../stylesheets/helppage.css" />
-	<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../stylesheets/colorbox.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.colorbox.js"></script>
 </head>
 <body>
-	<div class="Background"><img class="backgroundimg" src="../images/woodentexture.jpg"></div>
+	<div class="Background"><img class="backgroundimg" src="../images/chalkboard2.jpg"></div>
 	<div class="Container"> </div>
 	<div class="Mainmenucontainer"> 
-		<div class="Mainmenu"><a href="/">Main Menu</a>
+		<div class="Mainmenu"><a href="/">Return to Main Menu</a>
 		</div>
 	</div>
 	<div class="Help"><a href="/help"> Help </a></div>
 	<div class="Objectives"> Objective of game: </div>
-	<div class="ObjectivesC">~ Progressing to highest level possible! </div>
+	<div id="levelStructure"> 
+		<p>There is a total of 15 levels: </p>
+		<br>
+		<P>Levels 1-5: (<b>1 synonym for each word</b>)</p>
+		<p>Number of words required to level up: Increases from 1 to 5 respective of level</P>
+		<br>
+		<p>Levels 6-10: (<b>2 synonyms for each word</b>)</p>
+		<p>Number of words required to level up: Increases from 1 to 5 respective of level</P>
+		<br>
+		<p>Levels 11-15: (<b>3 synonyms for each word</b>)</p>
+		<p>Number of words required to level up: Increases from 1 to 5 respective of level</P>
+	</div>
+	<div class="ObjectivesC"> ~ Aim to be the best on your local leaderboard! </div>
 	<div class="Rules"> Rules: </div>
-	<div class="Rules1">1. Find the required number of synonyms for the word given </br> in the level within the time limit</div>
-	<div class="Rules2"> 2. More importantly, have fun! :D </div>
+	<div class="Rules1">1. Find the required number of synonyms for the word given in the level within the time limit</div>
+	<div class="Rules2"> 2. Level structure of game can be seen <div id="here"><u> here </u></div></div>
 
 </body>
+
+<script>
+	$(document).ready(function() {
+		$('#here').on("click", function() {
+			window.scrollTo(0, 0);
+			$.colorbox({'href':'#levelStructure', 'inline':true, 'width':'700px', 'height':'800px'});
+		});
+	});
+</script>
 </html>

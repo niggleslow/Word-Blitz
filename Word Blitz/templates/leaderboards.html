@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<title> Leaderboards Page</title>
+	<link rel="stylesheet" href="../stylesheets/leaderboards.css" />
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/json2.js"></script>
+</head>
+<body>
+	<div class="Background"><img class="backgroundimg" src="../images/chalkboard2.jpg"></div>
+	<div class="Container"> </div>
+	<div class="Label"><a href="/"> LEADERBOARD </a></div>
+
+	<input id="playerName" type="hidden" value="{{playerName}}">
+
+	<div id="CurrentLeaders">
+		<ul>
+			<li id="firstPlace"> </li>
+			<li id="secondPlace"> </li>
+			<li id="thirdPlace"> </li>
+			<li id="fourthPlace"> </li>
+			<li id="fifthPlace"> </li>
+		</ul>
+	</div>
+
+	<div id="CurrentLevels">
+		<ul>
+			<li id="firstLevel"> </li>
+			<li id="secondLevel"> </li>
+			<li id="thirdLevel"> </li>
+			<li id="fourthLevel"> </li>
+			<li id="fifthLevel"> </li>
+		</ul>
+	</div>
+
+	<script>
+		if($.cookie('nameList') !== undefined) {
+			var nameList = JSON.parse($.cookie('nameList'));
+			var levelList = JSON.parse($.cookie('levelList'));
+			if(nameList.length === 1) {
+				document.getElementById("firstPlace").innerHTML = "1st: " + nameList[0].toString();
+				document.getElementById("firstLevel").innerHTML = "Level: " + levelList[0].toString();				
+			}
+			else if(nameList.length === 2) {
+				document.getElementById("firstPlace").innerHTML = "1st: " + nameList[0].toString();
+				document.getElementById("secondPlace").innerHTML = "2nd: " + nameList[1].toString();
+				document.getElementById("firstLevel").innerHTML = "Level: " + levelList[0].toString();
+				document.getElementById("secondLevel").innerHTML = "Level: " + levelList[1].toString();				
+			}
+			else if(nameList.length === 3) {
+				document.getElementById("firstPlace").innerHTML = "1st: " + nameList[0].toString();
+				document.getElementById("secondPlace").innerHTML = "2nd: " + nameList[1].toString();
+				document.getElementById("thirdPlace").innerHTML = "3rd: " + nameList[2].toString();
+				document.getElementById("firstLevel").innerHTML = "Level: " + levelList[0].toString();
+				document.getElementById("secondLevel").innerHTML = "Level: " + levelList[1].toString();
+				document.getElementById("thirdLevel").innerHTML = "Level: " + levelList[2].toString();
+			}
+			else if(nameList.length === 4) {
+				document.getElementById("firstPlace").innerHTML = "1st: " + nameList[0].toString();
+				document.getElementById("secondPlace").innerHTML = "2nd: " + nameList[1].toString();
+				document.getElementById("thirdPlace").innerHTML = "3rd: " + nameList[2].toString();
+				document.getElementById("fourthPlace").innerHTML = "4th: " + nameList[3].toString();
+				document.getElementById("firstLevel").innerHTML = "Level: " + levelList[0].toString();
+				document.getElementById("secondLevel").innerHTML = "Level: " + levelList[1].toString();
+				document.getElementById("thirdLevel").innerHTML = "Level: " + levelList[2].toString();
+				document.getElementById("fourthLevel").innerHTML = "Level: " + levelList[3].toString();
+			}
+			else if(nameList.length >= 5) {
+				document.getElementById("firstPlace").innerHTML = "1st: " + nameList[0].toString();
+				document.getElementById("secondPlace").innerHTML = "2nd: " + nameList[1].toString();
+				document.getElementById("thirdPlace").innerHTML = "3rd: " + nameList[2].toString();
+				document.getElementById("fourthPlace").innerHTML = "4th: " + nameList[3].toString();
+				document.getElementById("fifthPlace").innerHTML = "5th: " + nameList[4].toString();
+				document.getElementById("firstLevel").innerHTML = "Level: " + levelList[0].toString();
+				document.getElementById("secondLevel").innerHTML = "Level: " + levelList[1].toString();
+				document.getElementById("thirdLevel").innerHTML = "Level: " + levelList[2].toString();
+				document.getElementById("fourthLevel").innerHTML = "Level: " + levelList[3].toString();
+				document.getElementById("fifthLevel").innerHTML = "Level: " + levelList[4].toString();
+			}
+		}
+	</script>	
+</body>
+</html>

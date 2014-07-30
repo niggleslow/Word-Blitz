@@ -2,49 +2,109 @@
 <head>
 	<title> Game Page</title>
 	<link rel="stylesheet" href="../stylesheets/game.css" />
-	<link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../stylesheets/jquery.countdown.css">
+	<link rel="stylesheet" href="../stylesheets/colorbox.css">
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.plugin.js"></script> 
+	<script type="text/javascript" src="../js/jquery.countdown.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/jquery.colorbox.js"></script>
 </head>
 <body>
-	<div class="Background"><img class="backgroundimg" src="../images/woodentexture.jpg"></div>
+	<div class="Background"><img class="backgroundimg" src="../images/chalkboard2.jpg"></div>
 	
-	<div class="Mainmenucontainer"> 
-		<div class="Mainmenu"><a href="/">Main Menu</a>
+	<div class="Mainmenucontainer"><a href="/"> 
+		<div class="Mainmenu">Main Menu </div></a>
+	</div>
+
+	<div class="WordContainer"> 
+		<div class="Word"> {{chosen}} </div>
+	</div>
+	
+	<div class="containerMisc">
+		<div class="LevelCounterContainer">
+			<div class="LevelLabel"> Current Level: </div>
+			<div class="LevelCounter"> {{level}} </div>
+		</div>
+
+		<div class="WordCounterContainer">
+			<div class="WordLabel"> Number of Words Left (Current Level): </div>
+			<div class="WordCounter"> {{wordCounter}} </div>
+		</div>
+
+		<div class="SynCounterContainerLevelCounterContainer">
+			<div class="SynLabel"> Number of Synonyms Left (Current Word): </div>
+			<div class="SynCounter"> {{synLeft}} </div>
 		</div>
 	</div>
 	
-	<div class="Word"> {{chosen}} </div>
+	<div class="WordsContainer">
+		<div class="AcceptedWordsContainer"></div>
+		<div class="AcceptedWordsLabel"> Accepted Words: </div>
+		<div class="AcceptedWords"> {{acceptedWords}} </div>
 	
-	<div class="AcceptedWordsContainer"> 
-		<div class="AcceptedWords"> {{acceptedWords}}
-		</div>
+		<div class="RejectedWordsContainer"></div>
+		<div class="RejectedWordsLabel"> Rejected Words: </div>
+		<div class="RejectedWords"> {{rejectedWords}} </div>
 	</div>
-	
-	<div class="RejectedWordsContainer"> 
-		<div class="RejectedWords"> {{rejectedWords}}
-		</div>
-	</div>
-	
-	<div class="WordCounterContainer">
-		<div class="WordCounter"> Word Count </div>
-	</div>
-	
-	<div class="TimerContainer">
-		<div class="Timer"> Countdown Timer Goes Here </div>
-	</div>
-	
-	<div class="LevelCounterContainer">
-		<div class="LevelCounter"> Level Counter Goes Here </div>
+
+	<div id="RepeatedContainer">
+		<div class="Warning"> {{warning}} </div>
 	</div>
 	
 	<div class="UserEntryContainer">
 		<div class="UserEntry">
-			<form method="post">
-				<label for="Entry">Synonym:</label>
-				<input name="userTry" type="text" value="{{userTry}}"><br>
-				<input name="" type="submit" value="ENTER">
+			<label for="Entry" id="Entry">Synonym:</label>
+			<form method="post" id="form">
+				<input name="userTry" type="text" value="{{userTry}}">
+				<input id ="SubmitButton" name="" type="submit" value="Enter!">
 			</form>
 		</div>		
 	</div>
 
+	<div id="GameOver">
+		<div id="Note"> Game over! Thanks for playing! :) </div>
+		<form type="input" action="/leaderboard" method="get">
+			Your name is: <input name="playerName" type="text">
+			<input type="submit" value="submit">
+		</form>
+	</div>
+
+	<div class="TimerContainer">
+		<div id="Timer"></div>
+	</div>
+	<script>
+		$(document).ready(function () { $("#RepeatedContainer").fadeOut(1800); });
+
+		if($.cookie('currentLevel') == undefined) {
+			$.cookie('currentLevel', 1);
+		}
+		if($.cookie('currentLevel') < {{level}}) {
+			$.cookie('currentLevel', {{level}});
+			var a = 90;
+			$.cookie('timeLeft', a);
+			setInterval(function() { $.cookie('timeLeft', a--)}, 1000);
+		}
+		else {
+			if($.cookie('timeLeft') == undefined) {
+				var a = 90;
+				$.cookie('timeLeft', a);
+				setInterval(function() { $.cookie('timeLeft', a--)}, 1000);
+			}
+			else {
+				var a = $.cookie('timeLeft');
+				setInterval(function() { $.cookie('timeLeft', a--)}, 1000);
+			}
+		}
+		$("#Timer").countdown({until: +($.cookie('timeLeft')), format: 'S'});
+		
+		setInterval( function() {
+			if(($.cookie('timeLeft') == 0) || ({{level}} == 16))  {
+				$.colorbox({'href':'#GameOver', 'inline':true, 'width':'450px', 'height':'200px'});
+			}
+		}, 1000)
+	</script>
 </body>
 </html>
